@@ -18,6 +18,9 @@ const usuarioRouter = require('./app/routers/usuario.router.js');
 const mascotaRouter = require('./app/routers/mascota.router.js');
 const servicioRouter = require('./app/routers/servicio.router.js');
 const citaRouter = require('./app/routers/cita.route.js');
+const espacioRouter = require('./app/routers/espacio.route.js');
+const reservaespacioRouter = require('./app/routers/reservaespacio.router.js');
+const reservaRouter = require('./app/routers/reserva.router.js');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -29,6 +32,9 @@ app.use('/', usuarioRouter);
 app.use('/', mascotaRouter);
 app.use('/', servicioRouter);
 app.use('/', citaRouter);
+app.use('/', espacioRouter);
+app.use('/', reservaespacioRouter);
+app.use('/', reservaRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the Product API" });

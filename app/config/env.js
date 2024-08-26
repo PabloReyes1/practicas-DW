@@ -1,9 +1,9 @@
 // app/config/env.js
 const env = {
-    database: 'pablonskydb',
-    username: 'pablosnky',
-    password: 'AKQQRoMn2yvITKWc6KG9kiLllt1PlScT',
-    host: 'dpg-cqin6b2j1k6c739hkahg-a.oregon-postgres.render.com',
+    database: 'pablonskydb_owc3',
+    username: 'pablonsky',
+    password: 'aaqAOr1b647vd4TJpQjuxOc7wsDKPqwI',
+    host: 'dpg-cr6ejolumphs73co3nng-a.oregon-postgres.render.com',
     dialect: 'postgres',
     pool: {
       max: 5,
