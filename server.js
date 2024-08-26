@@ -14,6 +14,10 @@ const productRouter = require('./app/routers/product.router.js');
 const pruebaRouter = require('./app/routers/prueba.router.js');
 const musicRouter = require('./app/routers/music.router.js');
 const libroRouter = require('./app/routers/libro.router.js');
+const usuarioRouter = require('./app/routers/usuario.router.js');
+const mascotaRouter = require('./app/routers/mascota.router.js');
+const servicioRouter = require('./app/routers/servicio.router.js');
+const citaRouter = require('./app/routers/cita.route.js');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,6 +25,10 @@ app.use('/', libroRouter);
 app.use('/', productRouter);
 app.use('/', pruebaRouter);
 app.use('/', musicRouter);
+app.use('/', usuarioRouter);
+app.use('/', mascotaRouter);
+app.use('/', servicioRouter);
+app.use('/', citaRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the Product API" });
