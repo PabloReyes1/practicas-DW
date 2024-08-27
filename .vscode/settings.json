@@ -7,13 +7,13 @@
                 }
             },
             "previewLimit": 50,
-            "server": "dpg-cqin6b2j1k6c739hkahg-a.oregon-postgres.render.com",
+            "server": "dpg-cr6ejolumphs73co3nng-a.oregon-postgres.render.com",
             "port": 5432,
             "askForPassword": true,
             "driver": "PostgreSQL",
-            "name": "umg-salama-26735",
-            "database": "pablonskydb",
-            "username": "pablosnky"
+            "name": "umg-salama",
+            "database": "pablonskydb_owc3",
+            "username": "pablonsky"
         }
     ]
 }

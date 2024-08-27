@@ -28,13 +28,11 @@ db.Libro = require('../models/libro.model.js')(sequelize, Sequelize);
 db.Product = require('../models/product.model.js')(sequelize, Sequelize);
 db.Prueba = require('../models/prueba.model.js')(sequelize, Sequelize);
 db.Music = require('../models/music.model.js')(sequelize, Sequelize);
-db.Libro = require('../models/libro.model.js')(sequelize, Sequelize);
 db.Usuario = require('../models/usuario.model.js')(sequelize, Sequelize);
 db.Mascota = require('../models/mascota.model.js')(sequelize, Sequelize);
-db.Usuario = require('../models/usuario.model.js')(sequelize, Sequelize);
-db.Cita = require('../models/cita.models.js')(sequelize, Sequelize);
+db.Cita = require('../models/cita.model.js')(sequelize, Sequelize);
 db.Espacio = require('../models/espacio.models.js')(sequelize, Sequelize);
 db.ReservaEspacio = require('../models/reservaespacio.model.js')(sequelize, Sequelize);
-db.Reserva = require('../models/reserva.models.js')(sequelize, Sequelize);
+db.Reserva = require('../models/reserva.model.js')(sequelize, Sequelize);
 
 module.exports = db;
