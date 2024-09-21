@@ -5,30 +5,30 @@ module.exports = (sequelize, Sequelize) => {
         primaryKey: true,
         autoIncrement: true
       },
-      nombre_libro: {
+      titulo: {
         type: Sequelize.STRING(60)
+      },
+      id_autor: {
+        type: Sequelize.INTEGER
+      },
+      isbn: {
+        type: Sequelize.STRING(25)
       },
       editorial: {
         type: Sequelize.STRING(25)
       },
-      autor: {
-        type: Sequelize.STRING(25)
-      },
-      genero: {
-        type: Sequelize.STRING(20)
-      },
-      pais_autor: {
-        type: Sequelize.STRING(20)
-      },
-      numero_paginas: {
-        type: Sequelize.INTEGER
-      },
-      año_edicion: {
+      año_publicacion: {
         type: Sequelize.DATE
       },
-      precio_libro: {
-        type: Sequelize.FLOAT
-      }
+      categoria: {
+        type: Sequelize.STRING(20)
+      },
+      cantidad_disponible: {
+        type: Sequelize.INTEGER
+      },
+      ubicacion: {
+        type: Sequelize.STRING(20)
+      },
     });
   
     return Libro;

@@ -8,9 +8,9 @@ exports.create = (req, res) => {
     usuario.nombre = req.body.nombre;
     usuario.apellidos = req.body.apellidos;
     usuario.email = req.body.email;
-    usuario.password = req.body.password;
-    usuario.numero_telefono = req.body.numero_telefono;
-    usuario.rol = req.body.rol;
+    usuario.telefono = req.body.telefono;
+    usuario.direccion = req.body.direccion;
+    usuario.estado = req.body.estado;
 
     Usuario.create(usuario).then(result => {
       res.status(200).json({
@@ -77,9 +77,9 @@ exports.updateById = async (req, res) => {
         nombre: req.body.nombre,
         apellidos: req.body.apellidos,
         email: req.body.email,
-        password: req.body.password,
-        numero_telefono: req.body.numero_telefono,
-        rol: req.body.rol
+        telefono: req.body.telefono,
+        direccion: req.body.direccion,
+        estado: req.body.estado
       };
       let result = await Usuario.update(updatedObject, { returning: true, where: { id_usuario: usuarioId } });
 

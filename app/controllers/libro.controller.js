@@ -5,14 +5,14 @@ exports.create = (req, res) => {
   let libro = {};
 
   try {
-    libro.nombre_libro = req.body.nombre_libro;
+    libro.titulo = req.body.titulo;
+    libro.id_autor = req.body.id_autor;
+    libro.isbn = req.body.isbn;
     libro.editorial = req.body.editorial;
-    libro.autor = req.body.autor;
-    libro.genero = req.body.genero;
-    libro.pais_autor = req.body.pais_autor;
-    libro.numero_paginas = req.body.numero_paginas;
-    libro.año_edicion = req.body.año_edicion;
-    libro.precio_libro = req.body.precio_libro;
+    libro.año_publicacion = req.body.año_publicacion;
+    libro.categoria = req.body.categoria;
+    libro.cantidad_disponible = req.body.cantidad_disponible;
+    libro.ubicacion = req.body.ubicacion;
 
     Libro.create(libro).then(result => {
       res.status(200).json({
@@ -76,14 +76,14 @@ exports.updateById = async (req, res) => {
       });
     } else {
       let updatedObject = {
-        nombre_libro: req.body.nombre_libro,
+        titulo: req.body.titulo,
+        id_autor: req.body.id_autor,
+        isbn: req.body.isbn,
         editorial: req.body.editorial,
-        autor: req.body.autor,
-        genero: req.body.genero,
-        pais_autor: req.body.pais_autor,
-        numero_paginas: req.body.numero_paginas,
-        año_edicion: req.body.año_edicion,
-        precio_libro: req.body.precio_libro
+        año_publicacion: req.body.año_publicacion,
+        categoria: req.body.categoria,
+        cantidad_disponible: req.body.cantidad_disponible,
+        ubicacion: req.body.ubicacion
       };
       let result = await Libro.update(updatedObject, { returning: true, where: { codigo_libro: libroId } });
 

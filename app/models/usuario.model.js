@@ -18,18 +18,18 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false,
         unique: true
       },
-      password: {
+      telefono: {
+        type: Sequelize.INTEGER
+      },
+      direccion: {
         type: Sequelize.STRING(100),
         allowNull: false
       },
-      numero_telefono: {
-        type: Sequelize.STRING(15)
-      },
-      rol: {
+      estado: {
         type: Sequelize.STRING(20),
         allowNull: false,
         validate: {
-          isIn: [['cliente', 'admin']]
+          isIn: [['activo', 'inactivo', 'suspendido']]
         }
       }
     });
