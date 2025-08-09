@@ -24,7 +24,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-db.Usuario = require('../models/usuario.model.js')(sequelize, Sequelize);
 db.Titulo = require('../models/titulo.model.js')(sequelize, Sequelize);
 
 

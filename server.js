@@ -10,13 +10,11 @@ db.sequelize.sync({ force: true }).then(() => {
   console.log('Drop and Resync with { force: true }');
 });
 
-const usuarioRouter = require('./app/routers/usuario.router.js');
 const tituloRouter = require('./app/routers/titulo.router.js');
 
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/', usuarioRouter);
 app.use('/', tituloRouter);
 
 
