@@ -35,7 +35,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER,
       allowNull: false
     },
-    campoAdicionalxd: {
+    bellako: {
       type: Sequelize.STRING(150),
       allowNull: false
     }
