@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const ctrl = require('../controllers/pago.controller.js');
 
-Crear
+//Crear
 router.post('/api/pagos/create', ctrl.create);
 
 // Listar (?limit=&offset=&id_alumno=&estado=&metodo=&moneda=&concepto=&desde=&hasta=)
