@@ -32,6 +32,9 @@ db.Curso        = require('../models/curso.model.js')(sequelize, Sequelize);
 db.Asignacion   = require('../models/asignacion.model.js')(sequelize, Sequelize);
 db.Nota         = require('../models/nota.model.js')(sequelize, Sequelize);
 db.Pago         = require('../models/pago.model.js')(sequelize, Sequelize);
+db.PagoMatricula = require('../models/pagoMatricula.model.js')(sequelize, Sequelize);
+
+
 
 // Tu modelo de ejemplo inicial (películas/series)
 db.Titulo       = require('../models/titulo.model.js')(sequelize, Sequelize);

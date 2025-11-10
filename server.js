@@ -18,6 +18,10 @@ const cursoRouter = require('./app/routers/curso.router.js');
 const asignacionRouter = require('./app/routers/asignacion.router.js');
 const notaRouter = require('./app/routers/nota.router.js');
 const pagoRouter = require('./app/routers/pago.router.js');
+const pagoMatriculaRouter = require('./app/routers/pagoMartricula.router.js');
+const stripeRouter = require('./app/routers/stripe.router.js');
+
+// Middleware
 
 
 
@@ -31,6 +35,8 @@ app.use('/', cursoRouter);
 app.use('/', asignacionRouter);
 app.use('/', notaRouter);
 app.use('/', pagoRouter);
+app.use('/', pagoMatriculaRouter);
+app.use('/', stripeRouter);
 
 
 app.get("/", (req, res) => {
