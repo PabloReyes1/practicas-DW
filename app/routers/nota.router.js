@@ -1,4 +1,3 @@
-// app/routers/nota.router.js
 const express = require('express');
 const router = express.Router();
 const ctrl = require('../controllers/nota.controller.js');
@@ -14,6 +13,13 @@ router.get('/api/notas/onebyid/:id', ctrl.getById);
 
 // Resumen por asignación (?id_asignacion=)
 router.get('/api/notas/summary', ctrl.summaryByAsignacion);
+
+// 👉 Matriz (para el módulo tipo hoja de notas)
+router.get('/api/notas/matriz', ctrl.matriz);
+router.post('/api/notas/matriz', ctrl.matrizUpsert);
+
+// 👉 Publicar notas de un curso/parcial
+router.post('/api/notas/publicar', ctrl.publicar);
 
 // Actualizar
 router.put('/api/notas/update/:id', ctrl.updateById);
